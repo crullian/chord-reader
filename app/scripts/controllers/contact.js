@@ -8,5 +8,7 @@
  * Controller of the chordReaderApp
  */
 angular.module('chordReaderApp')
-  .controller('ContactCtrl', function () {
-});
+  .controller('ContactCtrl', function ($rootScope) {
+    $rootScope.currentPage = 'contact';
+
+  });
