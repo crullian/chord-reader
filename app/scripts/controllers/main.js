@@ -8,10 +8,14 @@
  * Controller of the chordReaderApp
  */
 angular.module('chordReaderApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+	.controller('MainCtrl', function($rootScope, $scope) {
+
+		$rootScope.currentPage = 'home';
+
+		$scope.awesomeThings = [
+			'HTML5 Boilerplate',
+			'AngularJS',
+			'Karma',
+			'Fourth thing'
+		];
+	});
