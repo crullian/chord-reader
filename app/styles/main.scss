@@ -50,29 +50,143 @@ body {
 
 /* Main marketing message and sign up button */
 .jumbotron {
+  background-color: #428bca;
+  height: 350px;
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
+  position: relative;
 
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
+  .strings{
+    position: absolute;
+    top: 20px;
+    margin:0 auto;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    div {
+      display: inline-block;
+      background-color: #99A8A7;
+      width:5px;
+      height:302px;
+      margin-left: 15px;
+      margin-right: 15px;
+    }
   }
+  .frets {
+    //background-color: #AB723A;
+    position: absolute;
+    top: 20px;
+    margin:0 auto;
+    width: 198px;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    div {
+      border-radius: 100px;
+      display: inline-block;
+      background-color: #333333;
+      width:198px;
+      height:5px;
+      margin-bottom:64px;
+    }
+  }
+
+
+
+  /*.string6 {
+    display: inline-block;
+    background-color: #7560BB;
+    height: 250px;
+    width: 2px;
+    margin-right: 25px;
+  }
+  .string5 {
+    display: inline-block;
+    background-color: #7560BB;
+    height: 250px;
+    width: 2px;
+    margin-right: 25px;
+  }
+  .string4 {
+    display: inline-block;
+    background-color: #7560BB;
+    height: 250px;
+    width: 2px;
+    margin-right: 25px;
+  }
+  .string3 {
+    display: inline-block;
+    background-color: #7560BB;
+    height: 250px;
+    width: 2px;
+    margin-right: 25px;
+  }
+  .string2 {
+    display: inline-block;
+    background-color: #7560BB;
+    height: 250px;
+    width: 2px;
+    margin-right: 25px;
+  }
+  .string1 {
+    display: inline-block;
+    background-color: #7560BB;
+    height: 250px;
+    width: 2px;
+    margin-right: 25px;
+  }
+
+  .fret1 {
+    display: inline-block;
+    background-color: #61BED2;
+    height: 2px;
+    width: 157px;
+    margin-bottom: 20px;
+
+  }
+  .fret2 {
+    display: inline-block;
+    background-color: #61BED2;
+    height: 2px;
+    width: 157px;
+    margin-top: 20px;
+  }
+  .fret3 {
+    display: inline-block;
+    background-color: #61BED2;
+    height: 2px;
+    width: 157px;
+    margin-top: 20px;
+  }
+  .fret4 {
+    display: inline-block;
+    background-color: #61BED2;
+    height: 2px;
+    width: 157px;
+    margin-top: 20px;
+  }
+  .fret5 {
+    display: inline-block;
+    background-color: #61BED2;
+    height: 2px;
+    width: 157px;
+    margin-top: 20px;
+  }
+  .fret6 {
+    display: inline-block;
+    background-color: #61BED2;
+    height: 2px;
+    width: 157px;
+    margin-top: 20px;
+  }*/
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-
-  p + h4 {
-    margin-top: 28px;
-  }
-}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
     max-width: 730px;
-  }
+  }                                                                            
 
   /* Remove the padding we set earlier */
   .header,
@@ -86,7 +200,7 @@ body {
     margin-bottom: 30px;
   }
   /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
+  .jumbotro {
     border-bottom: 0;
   }
 }
