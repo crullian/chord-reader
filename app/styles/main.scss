@@ -90,6 +90,25 @@ body {
       margin-bottom:64px;
     }
   }
+  .fingers {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    background-color: #03C800;
+    z-index: 3;
+    right: 0;
+    margin: 0 auto;
+    left: 37px;
+    top: 120px;
+    color: #7560BB;
+    font-size: 20px;
+    font-weight: bold;
+    div {
+
+    }
+  }
+  
 
 
 
