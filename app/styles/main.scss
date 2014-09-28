@@ -34,8 +34,25 @@ body {
     margin-bottom: 0;
     line-height: 40px;
     padding-bottom: 19px;
+    
   }
 }
+.navbar {
+  background-color: #fff;
+  border: none;
+}
+.navbar-brand {
+  font-size: 40px;
+}
+.navbar-collapse {
+  border: none;
+  float: right;
+}
+.nav-pills {
+  padding-left: 80px;
+  padding-right: 0;
+}
+
 
 /* Custom page footer */
 .footer {
@@ -44,7 +61,7 @@ body {
   border-top: 1px solid #e5e5e5;
 }
 
-.container-narrow > hr {
+.container-narrow > h3 {
   margin: 30px 0;
 }
 
@@ -56,7 +73,7 @@ body {
   border-bottom: 1px solid #e5e5e5;
   position: relative;
 
-  .strings{
+  .strings {
     position: absolute;
     top: 20px;
     margin:0 auto;
@@ -108,96 +125,6 @@ body {
 
     }
   }
-  
-
-
-
-  /*.string6 {
-    display: inline-block;
-    background-color: #7560BB;
-    height: 250px;
-    width: 2px;
-    margin-right: 25px;
-  }
-  .string5 {
-    display: inline-block;
-    background-color: #7560BB;
-    height: 250px;
-    width: 2px;
-    margin-right: 25px;
-  }
-  .string4 {
-    display: inline-block;
-    background-color: #7560BB;
-    height: 250px;
-    width: 2px;
-    margin-right: 25px;
-  }
-  .string3 {
-    display: inline-block;
-    background-color: #7560BB;
-    height: 250px;
-    width: 2px;
-    margin-right: 25px;
-  }
-  .string2 {
-    display: inline-block;
-    background-color: #7560BB;
-    height: 250px;
-    width: 2px;
-    margin-right: 25px;
-  }
-  .string1 {
-    display: inline-block;
-    background-color: #7560BB;
-    height: 250px;
-    width: 2px;
-    margin-right: 25px;
-  }
-
-  .fret1 {
-    display: inline-block;
-    background-color: #61BED2;
-    height: 2px;
-    width: 157px;
-    margin-bottom: 20px;
-
-  }
-  .fret2 {
-    display: inline-block;
-    background-color: #61BED2;
-    height: 2px;
-    width: 157px;
-    margin-top: 20px;
-  }
-  .fret3 {
-    display: inline-block;
-    background-color: #61BED2;
-    height: 2px;
-    width: 157px;
-    margin-top: 20px;
-  }
-  .fret4 {
-    display: inline-block;
-    background-color: #61BED2;
-    height: 2px;
-    width: 157px;
-    margin-top: 20px;
-  }
-  .fret5 {
-    display: inline-block;
-    background-color: #61BED2;
-    height: 2px;
-    width: 157px;
-    margin-top: 20px;
-  }
-  .fret6 {
-    display: inline-block;
-    background-color: #61BED2;
-    height: 2px;
-    width: 157px;
-    margin-top: 20px;
-  }*/
 }
 
 
@@ -205,7 +132,16 @@ body {
 @media screen and (min-width: 768px) {
   .container {
     max-width: 730px;
-  }                                                                            
+  }   
+
+  .navbar-collapse {
+    
+    float: right;
+  }
+  .nav-pills {
+    /*padding-left: 80px;
+    padding-right: 0;*/
+  }                                                                         
 
   /* Remove the padding we set earlier */
   .header,
@@ -219,7 +155,7 @@ body {
     margin-bottom: 30px;
   }
   /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotro {
+  .jumbotron {
     border-bottom: 0;
   }
 }
