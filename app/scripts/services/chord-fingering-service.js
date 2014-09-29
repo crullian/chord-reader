@@ -28,13 +28,19 @@ function ChordFingeringService($http) {
     }
   }
 
+  // check localStorage first
+  if (localStorage.hasFingeringDictionary) {
+    self.dictionary = JSON.parse(localStorage.fingeringDictionary);
+    return done();
+  }
   // fetch the fingering dictionary JSON when this service starts up
   $http({
     url: 'data/fingering-dictionary.json',
     dataType: 'json'
   }).success(function (response) {
-    // TODO: save to local storage or something so this app can work offline
     self.dictionary = processDictionary(response);
+    localStorage.hasFingeringDictionary = 'true';
+    localStorage.fingeringDictionary = JSON.stringify(self.dictionary);
     done();
   }).error(function (error) {
     console.log(error);
