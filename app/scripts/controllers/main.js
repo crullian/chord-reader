@@ -10,10 +10,8 @@
 angular.module('chordReaderApp')
 	.controller('MainCtrl', function($rootScope, $scope, chordFingeringService) {
 
-    chordFingeringService.on('ready', function () {
-      console.log('Hey what are the fingerings for the chord of C?');
-      console.log(chordFingeringService.getFingerings('C'));
-    });
+    console.log('Hey what are the fingerings for the chord of C?');
+    console.log(chordFingeringService.getFingerings('C'));
 
 		$rootScope.currentPage = 'home';
 

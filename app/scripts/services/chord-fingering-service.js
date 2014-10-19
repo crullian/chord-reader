@@ -18,35 +18,8 @@ function processDictionary(dictionary) {
   return outputDict;
 }
 
-function ChordFingeringService($http) {
-  var self = this;
-
-  function done() {
-    self.ready = true;
-    if (self.onReady) {
-      self.onReady();
-    }
-  }
-
-  // check localStorage first
-  if (localStorage.hasFingeringDictionary) {
-    self.dictionary = JSON.parse(localStorage.fingeringDictionary);
-    return done();
-  }
-  // fetch the fingering dictionary JSON when this service starts up
-  $http({
-    url: 'data/fingering-dictionary.json',
-    dataType: 'json'
-  }).success(function (response) {
-    self.dictionary = processDictionary(response);
-    localStorage.hasFingeringDictionary = 'true';
-    localStorage.fingeringDictionary = JSON.stringify(self.dictionary);
-    done();
-  }).error(function (error) {
-    console.log(error);
-    self.dictionary = {};
-    done();
-  });
+function ChordFingeringService(dictionary) {
+  this.dictionary = processDictionary(dictionary);
 }
 
 ChordFingeringService.prototype.getFingerings = function getFingerings(chordName) {
@@ -63,15 +36,5 @@ ChordFingeringService.prototype.getFingerings = function getFingerings(chordName
   return self.dictionary[normalizedName] || [];
 };
 
-ChordFingeringService.prototype.on = function on(event, callback) {
-  var self = this;
-  // dead simple faux EventEmitter because I wanted it and didn't
-  // know the Angular convention for this kind of stuff
-  // we assume the event is 'ready'
-  self.onReady = callback;
-  if (self.ready) {
-    callback();
-  }
-};
-
-angular.module('chordReaderApp').service('chordFingeringService', ['$http', ChordFingeringService]);
+angular.module('chordReaderApp').service('chordFingeringService',
+  ['dictionary', ChordFingeringService]);
