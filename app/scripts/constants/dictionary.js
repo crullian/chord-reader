@@ -1,4 +1,6 @@
-{
+'use strict';
+
+var dictionary = {
   "C": [
     "x32010",
     "x35553",
@@ -2441,4 +2443,6 @@
   "Gsus4/F": [
     "330011"
   ]
-}
+};
+
+angular.module('chordReaderApp').constant('dictionary', dictionary);
